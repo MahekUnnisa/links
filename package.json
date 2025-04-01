@@ -1,0 +1,26 @@
+{
+  "name": "links-page",
+  "version": "1.0.0",
+  "description": "Personal links page",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "setup": "node setup.js"
+  },
+  "keywords": [
+    "links",
+    "portfolio",
+    "social-links"
+  ],
+  "author": "Mahek Unnisa",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "fs-extra": "^11.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
