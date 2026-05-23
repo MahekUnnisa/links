@@ -94,6 +94,7 @@ const config = {
     ],
 
     projects: {
+        hidden: true, // set to false to show again
         title: "Latest work",
         subtitle: "Side projects and experiments I've shipped.",
         items: [

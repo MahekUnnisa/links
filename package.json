@@ -4,8 +4,9 @@
   "description": "Static personal portfolio for GitHub Pages",
   "scripts": {
     "build": "node build.js",
-    "preview": "node build.js && node server.js",
-    "start": "node build.js && node server.js"
+    "preview": "npm run build && node server.js",
+    "start": "npm run preview",
+    "dev": "node watch.js"
   },
   "keywords": ["portfolio", "github-pages"],
   "author": "Mahek Unnisa",
