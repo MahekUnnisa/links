@@ -1,56 +1,79 @@
-# Personal Links Page
+# Personal Portfolio
 
-A clean, responsive links page for social media profiles and portfolio links.
+A fast, static single-page portfolio built for GitHub Pages. Edit `config.js`, run `npm run build`, deploy.
 
-## Local Development
+## Why this is fast
 
-1. Install dependencies:
+- **Pre-rendered HTML** — content is baked in at build time (no empty-page flash)
+- **Zero CDN dependencies** — no Google Fonts or Font Awesome (~100KB+ saved)
+- **System fonts** — instant text render, no font download
+- **Inline SVG icons** — small, no extra requests
+- **Minified CSS** — smaller payload in production
+- **Tiny JS** (~1KB) — only theme toggle, smooth scroll, and nav highlight
+
+## Quick start
+
 ```bash
-npm install
+# Edit your content
+vim config.js
+
+# Build static site → docs/
+node build.js
+
+# Preview locally
+python3 -m http.server 8080 --directory docs
+# or
+npm run preview
 ```
 
-2. Start the development server:
-```bash
-npm run dev
-```
+Open http://localhost:8080
 
-3. Visit `http://localhost:3000` in your browser
+## GitHub Pages deployment
 
-## GitHub Pages Deployment
+### Option A — GitHub Actions (recommended)
 
-This project is configured to work with GitHub Pages. To deploy:
+1. Repo **Settings → Pages → Build and deployment → Source: GitHub Actions**
+2. Push to `main` — the workflow builds and deploys automatically
+3. You do **not** need to commit `docs/` when using Actions
 
-1. Push your changes to GitHub
-2. Go to your repository settings
-3. Under "GitHub Pages", select the `main` branch and `/docs` folder
-4. Your site will be available at `https://[username].github.io/[repository-name]`
+### Option B — `/docs` folder (classic)
 
-## Customization
+1. Run `node build.js` locally
+2. Commit and push the `docs/` folder
+3. Repo **Settings → Pages → Source: main branch, `/docs` folder**
 
-Edit the `public/config.js` file to update your links and profile information:
+## Customize
+
+Edit `config.js` only:
 
 ```javascript
-{
-    profile: {
-        name: "Your Name",
-        bio: "Your Bio",
-        image: "path/to/image.png"
-    },
-    links: [
-        {
-            name: "Platform Name",
-            url: "https://platform.com/username",
-            icon: "platform-icon"
-        }
-        // Add more links...
-    ]
-}
+const config = {
+    profile: { name, greeting, tagline, image: "./DP.jpg", initials: "MU" },
+    contact: { email, links: [...] },
+    about: { text: "..." },
+    experience: [{ company, role, period, highlights: [...] }],
+    skills: ["JavaScript", "Python"],
+    projects: { items: [...] },
+    onlinePresence: { items: [...] },
+    education: [{ institution, degree, period }],
+    social: [{ name, url, icon }]
+};
 ```
 
-## Technologies Used
+Add your photo as `DP.jpg` or `DP.png` in the project root — the build copies it to `docs/`.
 
-- HTML5
-- CSS3
-- JavaScript
-- Node.js/Express (for local development)
-- Font Awesome Icons
+## Project structure
+
+```
+config.js      ← edit this (your content)
+style.css      ← edit this (your styles)
+build.js       ← static site generator
+app.js         ← tiny runtime JS (theme + nav)
+icons.js       ← inline SVG icons
+docs/          ← generated output (GitHub Pages serves this)
+```
+
+## Technologies
+
+- HTML / CSS / vanilla JavaScript
+- Node.js (build only — not needed at runtime on GitHub Pages)
