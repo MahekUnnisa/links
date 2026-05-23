@@ -29,29 +29,41 @@ function copyDir(srcDir, destDir) {
     }
 }
 
-function build() {
-    const config = loadConfig();
-    fs.mkdirSync(OUT, { recursive: true });
+/** Copy built site files into dest (docs/ or repo root for GitHub Pages). */
+function publishSite(config, dest, { minifyCss: shouldMinify = true, skipCss = false } = {}) {
+    fs.mkdirSync(dest, { recursive: true });
 
-    fs.writeFileSync(path.join(OUT, 'index.html'), buildHtml(config));
+    fs.writeFileSync(path.join(dest, 'index.html'), buildHtml(config));
 
-    const css = fs.readFileSync(path.join(ROOT, 'style.css'), 'utf8');
-    fs.writeFileSync(path.join(OUT, 'style.css'), minifyCss(css));
+    if (!skipCss) {
+        const css = fs.readFileSync(path.join(ROOT, 'style.css'), 'utf8');
+        fs.writeFileSync(path.join(dest, 'style.css'), shouldMinify ? minifyCss(css) : css);
+    }
 
-    fs.copyFileSync(path.join(ROOT, 'app.js'), path.join(OUT, 'app.js'));
+    fs.copyFileSync(path.join(ROOT, 'app.js'), path.join(dest, 'app.js'));
 
     for (const asset of ASSETS) {
         const src = path.join(ROOT, asset);
         if (fs.existsSync(src)) {
-            fs.copyFileSync(src, path.join(OUT, asset));
+            fs.copyFileSync(src, path.join(dest, asset));
         }
     }
 
     for (const dir of ASSET_DIRS) {
-        copyDir(path.join(ROOT, dir), path.join(OUT, dir));
+        copyDir(path.join(ROOT, dir), path.join(dest, dir));
     }
 
-    console.log('Built static site → docs/');
+    fs.writeFileSync(path.join(dest, '.nojekyll'), '');
+}
+
+function build() {
+    const config = loadConfig();
+
+    publishSite(config, OUT);
+    // GitHub Pages is often set to deploy from repo root; index.html beats README.md
+    publishSite(config, ROOT, { skipCss: true });
+
+    console.log('Built static site → docs/ and repo root (for GitHub Pages)');
 }
 
 if (require.main === module) {
