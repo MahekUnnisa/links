@@ -4,6 +4,7 @@ const { svgIcon } = require('./icons');
 
 const ROOT = __dirname;
 const OUT = path.join(ROOT, 'docs');
+const ASSET_DIRS = ['assets'];
 const ASSETS = ['DP.jpg', 'DP.png'];
 
 function loadConfig() {
@@ -43,24 +44,6 @@ function renderIntro(config) {
                     <div class="avatar-fallback"${profile.image ? ' hidden' : ''}>${esc(profile.initials)}</div>
                 </div>
             </div>
-        </section>`;
-}
-
-function renderContact(config) {
-    const items = config.contact.links.map(link => `
-        <div class="contact-item">
-            ${svgIcon(link.icon, 'icon icon-sm contact-icon')}
-            ${link.url
-                ? `<a href="${esc(link.url)}" class="contact-link">${esc(link.value)}</a>`
-                : `<span class="contact-value">${esc(link.value)}</span>`
-            }
-        </div>
-    `).join('');
-
-    return `
-        <section id="contact" class="section contact">
-            <h2 class="section-heading">Contact</h2>
-            <div class="contact-list">${items}</div>
         </section>`;
 }
 
@@ -138,11 +121,12 @@ function renderProjects(config) {
         </article>
     `).join('');
 
+    const title = projects.title || 'Latest work';
+
     return `
-        <section id="projects" class="section projects">
-            <p class="section-label">My Projects</p>
-            <h2 class="section-heading">Check out my latest work</h2>
-            ${projects.subtitle ? `<p class="section-subtitle">${esc(projects.subtitle)}</p>` : ''}
+        <section id="projects" class="section projects section-featured">
+            <h2 class="section-hero">${esc(title)}</h2>
+            ${projects.subtitle ? `<p class="section-subtitle section-subtitle--center">${esc(projects.subtitle)}</p>` : ''}
             <div class="projects-grid">${cards}</div>
         </section>`;
 }
@@ -162,11 +146,12 @@ function renderOnlinePresence(config) {
         </a>
     `).join('');
 
+    const title = onlinePresence.title || 'Elsewhere on the web';
+
     return `
-        <section id="online-presence" class="section online-presence">
-            <p class="section-label">Knowledge Sharing</p>
-            <h2 class="section-heading">Online Presence</h2>
-            ${onlinePresence.subtitle ? `<p class="section-subtitle">${esc(onlinePresence.subtitle)}</p>` : ''}
+        <section id="online-presence" class="section online-presence section-featured">
+            <h2 class="section-hero">${esc(title)}</h2>
+            ${onlinePresence.subtitle ? `<p class="section-subtitle section-subtitle--center">${esc(onlinePresence.subtitle)}</p>` : ''}
             <div class="presence-list">${cards}</div>
         </section>`;
 }
@@ -206,18 +191,10 @@ function renderNav(config) {
         </a>
     `).join('');
 
-    const social = config.social.map(link => `
-        <a href="${esc(link.url)}" target="_blank" rel="noopener noreferrer" class="nav-item nav-social-link" aria-label="${esc(link.name)}" title="${esc(link.name)}">
-            ${svgIcon(link.icon)}
-        </a>
-    `).join('');
-
     return `
         <nav class="floating-nav" aria-label="Site navigation">
             <div class="floating-nav-inner">
                 <div class="nav-sections">${sections}</div>
-                <div class="nav-divider" aria-hidden="true"></div>
-                <div class="nav-social">${social}</div>
                 <div class="nav-divider" aria-hidden="true"></div>
                 <button class="nav-theme-toggle" id="theme-toggle" aria-label="Toggle theme" type="button">
                     ${svgIcon('sun', 'icon theme-icon')}
@@ -241,6 +218,9 @@ function buildHtml(config) {
     <meta property="og:title" content="${esc(profile.name)}">
     <meta property="og:description" content="${esc(description)}">
     <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>${esc(profile.name)}</title>
     <script>(function(){var t=localStorage.getItem('theme');if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.setAttribute('data-theme','dark')})();</script>
@@ -248,7 +228,6 @@ function buildHtml(config) {
 <body>
     <main class="page">
         ${renderIntro(config)}
-        ${renderContact(config)}
         ${renderAbout(config)}
         ${renderExperience(config)}
         ${renderSkills(config)}
@@ -285,6 +264,16 @@ function build() {
         const src = path.join(ROOT, asset);
         if (fs.existsSync(src)) {
             fs.copyFileSync(src, path.join(OUT, asset));
+        }
+    }
+
+    for (const dir of ASSET_DIRS) {
+        const srcDir = path.join(ROOT, dir);
+        if (!fs.existsSync(srcDir)) continue;
+        const destDir = path.join(OUT, dir);
+        fs.mkdirSync(destDir, { recursive: true });
+        for (const file of fs.readdirSync(srcDir)) {
+            fs.copyFileSync(path.join(srcDir, file), path.join(destDir, file));
         }
     }
 

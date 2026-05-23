@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="I primarily work on building automated systems that generate and manage news and developer content at scale. This includes backend services, background processi">
+    <meta name="description" content="I build backend systems that automate news and developer content at scale — APIs, background jobs, AI workflows, and Chrome extensions in React. I also work on ">
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
     <meta property="og:title" content="Mahek Unnisa">
-    <meta property="og:description" content="I primarily work on building automated systems that generate and manage news and developer content at scale. This includes backend services, background processi">
+    <meta property="og:description" content="I build backend systems that automate news and developer content at scale — APIs, background jobs, AI workflows, and Chrome extensions in React. I also work on ">
     <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Mahek Unnisa</title>
     <script>(function(){var t=localStorage.getItem('theme');if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.setAttribute('data-theme','dark')})();</script>
@@ -22,9 +25,9 @@
                     <h1 class="intro-greeting">Hi, I'm Mahek</h1>
                     <p class="intro-tagline">Textile technologist turned backend engineer. Currently building automated content systems at scale at NewsBytes.</p>
                     
-                        <a href="mailto:hello@mahekunnisa.dev" class="intro-email">
+                        <a href="mailto:mahekunnisa011@gmail.com" class="intro-email">
                             <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5h18v14H3V5zm2 2v.01L12 12l7-4.99V7H5zm0 2.24V17h14V9.24l-7 4.99-7-4.99z"/></svg>
-                            hello@mahekunnisa.dev
+                            mahekunnisa011@gmail.com
                         </a>
                     
                 </div>
@@ -35,29 +38,9 @@
             </div>
         </section>
         
-        <section id="contact" class="section contact">
-            <h2 class="section-heading">Contact</h2>
-            <div class="contact-list">
-        <div class="contact-item">
-            <svg class="icon icon-sm contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5h18v14H3V5zm2 2v.01L12 12l7-4.99V7H5zm0 2.24V17h14V9.24l-7 4.99-7-4.99z"/></svg>
-            <a href="mailto:hello@mahekunnisa.dev" class="contact-link">hello@mahekunnisa.dev</a>
-        </div>
-    
-        <div class="contact-item">
-            <svg class="icon icon-sm contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.5h4.56V23H.22V8.5zM8.5 8.5h4.37v1.98h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 6.99V23h-4.56v-7.03c0-1.68-.03-3.84-2.34-3.84-2.34 0-2.7 1.83-2.7 3.72V23H8.5V8.5z"/></svg>
-            <a href="https://www.linkedin.com/in/mahekunnisa/" class="contact-link">linkedin.com/in/mahekunnisa</a>
-        </div>
-    
-        <div class="contact-item">
-            <svg class="icon icon-sm contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-            <span class="contact-value">Hyderabad, India</span>
-        </div>
-    </div>
-        </section>
-        
         <section id="about" class="section about">
             <h2 class="section-heading">About</h2>
-            <p class="about-text">I primarily work on building automated systems that generate and manage news and developer content at scale. This includes backend services, background processing, personalisation, and integrations with AI-driven workflows. I also build and maintain Chrome extensions using React, integrating them with backend services and internal systems. In parallel, I work on internal tooling — including an analytics platform built on a Kubernetes-based, event-driven architecture for tracking and processing large-scale application data. My core interests are backend architecture, system design, automation, and the development of reliable production systems.</p>
+            <p class="about-text">I build backend systems that automate news and developer content at scale — APIs, background jobs, AI workflows, and Chrome extensions in React. I also work on internal tooling, including a Kubernetes-based analytics platform for large-scale event data. I care about system design, automation, and shipping reliable production software.</p>
         </section>
         
         <section id="experience" class="section experience">
@@ -66,7 +49,7 @@
             <article class="experience-item">
                 <a href="https://www.newsbytesapp.com" target="_blank" rel="noopener noreferrer" class="experience-link">
             <div class="experience-logo">
-                <span class="logo-initial">N</span>
+                <img src="./assets/newsbytes-logo.png" alt="NewsBytes" width="40" height="40" loading="lazy" decoding="async">
             </div>
             <div class="experience-body">
                 <div class="experience-header">
@@ -75,14 +58,14 @@
                 </div>
                 <p class="experience-role">Senior Software Engineer</p>
                 <ul class="experience-highlights">
-                    <li>Building automated systems that generate and manage news content at scale</li><li>Developing an analytics platform on Kubernetes-based, event-driven architecture</li><li>Leading backend architecture and production system reliability initiatives</li>
+                    <li>Own automated pipelines for news and developer content at scale</li><li>Build event-driven analytics on Kubernetes for product and ops data</li><li>Drive backend architecture, reliability, and production quality</li>
                 </ul>
             </div></a>
             </article>
             <article class="experience-item">
                 <a href="https://www.newsbytesapp.com" target="_blank" rel="noopener noreferrer" class="experience-link">
             <div class="experience-logo">
-                <span class="logo-initial">N</span>
+                <img src="./assets/newsbytes-logo.png" alt="NewsBytes" width="40" height="40" loading="lazy" decoding="async">
             </div>
             <div class="experience-body">
                 <div class="experience-header">
@@ -91,14 +74,14 @@
                 </div>
                 <p class="experience-role">Backend Developer</p>
                 <ul class="experience-highlights">
-                    <li>Revamped Chrome Extension using Next.js with Google Calendar integration</li><li>Built image processing pipeline with Python, Pillow &amp; BeautifulSoup for automated media handling</li><li>Optimized Laravel backend API with caching strategies and content personalization</li>
+                    <li>Shipped a Next.js Chrome extension with Google Calendar integration</li><li>Automated image pipelines with Python, Pillow, and BeautifulSoup</li><li>Tuned Laravel APIs with caching and personalization for DevBytes</li>
                 </ul>
             </div></a>
             </article>
             <article class="experience-item">
                 <a href="https://www.newsbytesapp.com" target="_blank" rel="noopener noreferrer" class="experience-link">
             <div class="experience-logo">
-                <span class="logo-initial">N</span>
+                <img src="./assets/newsbytes-logo.png" alt="NewsBytes" width="40" height="40" loading="lazy" decoding="async">
             </div>
             <div class="experience-body">
                 <div class="experience-header">
@@ -107,7 +90,7 @@
                 </div>
                 <p class="experience-role">Backend Developer Intern</p>
                 <ul class="experience-highlights">
-                    <li>Maintained Laravel and Livewire CMS for the DevBytes app</li><li>Revamped CMS UI with jQuery, Bootstrap, and Livewire to improve UX</li><li>Integrated GPT AI models via API to automate content generation</li>
+                    <li>Maintained the Laravel + Livewire CMS behind the DevBytes app</li><li>Refreshed CMS UI with Bootstrap and Livewire for better editorial flow</li><li>Wired GPT APIs into workflows to automate content generation</li>
                 </ul>
             </div></a>
             </article>
@@ -123,25 +106,9 @@
                 </div>
                 <p class="experience-role">Node.js Developer Intern</p>
                 <ul class="experience-highlights">
-                    <li>Built web applications using Node.js, Express.js, and MongoDB</li><li>Documented AWS practices and authored OpenAPI API documentation</li><li>Assisted in modernizing APIs to current best practices</li>
+                    <li>Built full-stack features with Node.js, Express, and MongoDB</li><li>Documented AWS practices and OpenAPI specs for internal APIs</li><li>Helped migrate legacy endpoints to current API standards</li>
                 </ul>
             </div></div>
-            </article>
-            <article class="experience-item">
-                <a href="https://www.theyarnbazaar.com" target="_blank" rel="noopener noreferrer" class="experience-link">
-            <div class="experience-logo">
-                <span class="logo-initial">Y</span>
-            </div>
-            <div class="experience-body">
-                <div class="experience-header">
-                    <h3 class="experience-company">The Yarn Bazaar</h3>
-                    <span class="experience-period">Jul 2021 — Sep 2021</span>
-                </div>
-                <p class="experience-role">Market Research Intern</p>
-                <ul class="experience-highlights">
-                    <li>Interviewed 75+ professionals for market research across industry portals</li><li>Compiled prospective client lists and improved existing market analysis data</li><li>Documented detailed analysis of current market demand and supply</li>
-                </ul>
-            </div></a>
             </article></div>
         </section>
         
@@ -150,14 +117,13 @@
             <div class="skills-grid"><span class="skill-tag">Python</span><span class="skill-tag">Django</span><span class="skill-tag">Laravel</span><span class="skill-tag">PHP</span><span class="skill-tag">Node.js</span><span class="skill-tag">React</span><span class="skill-tag">Next.js</span><span class="skill-tag">JavaScript</span><span class="skill-tag">HTML &amp; CSS</span><span class="skill-tag">Chrome Extensions</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">Redis</span><span class="skill-tag">AWS</span><span class="skill-tag">Docker</span><span class="skill-tag">Kubernetes</span><span class="skill-tag">API Development</span><span class="skill-tag">System Design</span><span class="skill-tag">Automation</span><span class="skill-tag">Event-Driven Architecture</span><span class="skill-tag">Git</span></div>
         </section>
         
-        <section id="projects" class="section projects">
-            <p class="section-label">My Projects</p>
-            <h2 class="section-heading">Check out my latest work</h2>
-            <p class="section-subtitle">A selection of things I've built and shipped.</p>
+        <section id="projects" class="section projects section-featured">
+            <h2 class="section-hero">Latest work</h2>
+            <p class="section-subtitle section-subtitle--center">Side projects and experiments I've shipped.</p>
             <div class="projects-grid">
         <article class="project-card">
             <h3 class="project-name">AlphaMall</h3>
-            <p class="project-desc">A full-featured ecommerce website where users can register, browse products by category, manage a wishlist, and checkout. Built with Django and Bootstrap.</p>
+            <p class="project-desc">Ecommerce app with auth, categories, wishlist, and cart — Django and Bootstrap.</p>
             <div class="project-tech">
                 <span class="tech-tag">Python</span><span class="tech-tag">Django</span><span class="tech-tag">SQLite3</span><span class="tech-tag">Bootstrap</span>
             </div>
@@ -170,7 +136,7 @@
     
         <article class="project-card">
             <h3 class="project-name">Notion to GitHub Publisher</h3>
-            <p class="project-desc">A tool that uses Notion and GitHub REST APIs to fetch code snippets from Notion page child blocks and publish them directly to a selected GitHub repository.</p>
+            <p class="project-desc">Syncs code blocks from Notion pages to a GitHub repo via Notion and GitHub APIs.</p>
             <div class="project-tech">
                 <span class="tech-tag">Node.js</span><span class="tech-tag">Notion API</span><span class="tech-tag">GitHub API</span>
             </div>
@@ -183,7 +149,7 @@
     
         <article class="project-card">
             <h3 class="project-name">TimeSphere</h3>
-            <p class="project-desc">A news web app built with React and a free public News API. Displays live articles across categories with a clean, responsive interface.</p>
+            <p class="project-desc">News reader built with React and a public News API, with category browsing.</p>
             <div class="project-tech">
                 <span class="tech-tag">React</span><span class="tech-tag">News API</span><span class="tech-tag">JavaScript</span>
             </div>
@@ -196,7 +162,7 @@
     
         <article class="project-card">
             <h3 class="project-name">Gemini Chatbot</h3>
-            <p class="project-desc">A conversational chatbot interface built in plain React, integrated with Google's Gemini API for AI-powered responses.</p>
+            <p class="project-desc">Chat UI in plain React powered by Google's Gemini API.</p>
             <div class="project-tech">
                 <span class="tech-tag">React</span><span class="tech-tag">Gemini API</span><span class="tech-tag">JavaScript</span>
             </div>
@@ -209,16 +175,15 @@
     </div>
         </section>
         
-        <section id="online-presence" class="section online-presence">
-            <p class="section-label">Knowledge Sharing</p>
-            <h2 class="section-heading">Online Presence</h2>
-            <p class="section-subtitle">I write about what I learn and share my open source work.</p>
+        <section id="online-presence" class="section online-presence section-featured">
+            <h2 class="section-hero">Elsewhere on the web</h2>
+            <p class="section-subtitle section-subtitle--center">Writing, code, and conversations about building software.</p>
             <div class="presence-list">
         <a href="https://github.com/MahekUnnisa" target="_blank" rel="noopener noreferrer" class="presence-card">
             <div class="presence-icon"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.8c.85.004 1.71.11 2.51.32 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></div>
             <div class="presence-body">
                 <h3 class="presence-title">GitHub</h3>
-                <p class="presence-desc">Open-source projects, experiments, and contributions — 300+ contributions across repos.</p>
+                <p class="presence-desc">Open-source projects and experiments — 300+ contributions.</p>
             </div>
             <svg class="icon presence-arrow" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7h10v10M7 17 17 7"/></svg>
         </a>
@@ -226,8 +191,8 @@
         <a href="https://dev.to/themahekunnisa" target="_blank" rel="noopener noreferrer" class="presence-card">
             <div class="presence-icon"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.42 10.05 3.05 14.42l4.37 4.37 1.41-1.42-2.95-2.96 2.95-2.96-1.41-1.4zm9.16 0-1.41 1.4 2.95 2.96-2.95 2.96 1.41 1.42 4.37-4.37-4.37-4.37zM6.34 6.34 4.93 4.93 2.1 7.76l2.83 2.83 1.41-1.25zM17.66 6.34l-1.41 1.41 1.41 1.25 2.83-2.83-2.83-2.83-1.41 1.25z"/></svg></div>
             <div class="presence-body">
-                <h3 class="presence-title">Dev.to Blog</h3>
-                <p class="presence-desc">Technical articles on Python, JavaScript, APIs, and my developer journey.</p>
+                <h3 class="presence-title">Dev.to</h3>
+                <p class="presence-desc">Articles on Python, JavaScript, APIs, and learning in public.</p>
             </div>
             <svg class="icon presence-arrow" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7h10v10M7 17 17 7"/></svg>
         </a>
@@ -235,8 +200,8 @@
         <a href="https://x.com/themahekunnisa" target="_blank" rel="noopener noreferrer" class="presence-card">
             <div class="presence-icon"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></div>
             <div class="presence-body">
-                <h3 class="presence-title">X (Twitter)</h3>
-                <p class="presence-desc">Quick thoughts, links, and conversations about tech and building in public.</p>
+                <h3 class="presence-title">X</h3>
+                <p class="presence-desc">Quick notes, links, and threads on tech and growth.</p>
             </div>
             <svg class="icon presence-arrow" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7h10v10M7 17 17 7"/></svg>
         </a>
@@ -248,7 +213,7 @@
             <div class="education-list">
         <article class="education-item">
             <div class="education-logo">
-                <span class="logo-initial">O</span>
+                <img src="./assets/osmania-logo.png" alt="Osmania University, Hyderabad" width="40" height="40" loading="lazy" decoding="async">
             </div>
             <div class="education-body">
                 <div class="education-header">
@@ -269,10 +234,6 @@
             <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"/></svg>
         </a>
     
-        <a href="#contact" class="nav-item" data-section="contact" aria-label="Contact" title="Contact">
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5h18v14H3V5zm2 2v.01L12 12l7-4.99V7H5zm0 2.24V17h14V9.24l-7 4.99-7-4.99z"/></svg>
-        </a>
-    
         <a href="#about" class="nav-item" data-section="about" aria-label="About" title="About">
             <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5z"/></svg>
         </a>
@@ -289,7 +250,7 @@
             <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 5h6l2 2h10v12H4V5zm0 2v10h16V9H11l-2-2H4z"/></svg>
         </a>
     
-        <a href="#online-presence" class="nav-item" data-section="online-presence" aria-label="Online" title="Online">
+        <a href="#online-presence" class="nav-item" data-section="online-presence" aria-label="Writing" title="Writing">
             <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3c-2 0-4 1.5-6 3v14c2-1.5 4-3 6-3s4 1.5 6 3V6c-2-1.5-4-3-6-3zm0 2c1.2 0 2.4.6 4 1.5v11.5c-1.4-.9-2.7-1.5-4-1.5s-2.6.6-4 1.5V6.5C7.6 5.6 8.8 5 10 5h2z"/></svg>
         </a>
     
@@ -298,26 +259,8 @@
         </a>
     </div>
                 <div class="nav-divider" aria-hidden="true"></div>
-                <div class="nav-social">
-        <a href="https://github.com/MahekUnnisa" target="_blank" rel="noopener noreferrer" class="nav-item nav-social-link" aria-label="GitHub" title="GitHub">
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.8c.85.004 1.71.11 2.51.32 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
-        </a>
-    
-        <a href="https://www.linkedin.com/in/mahekunnisa/" target="_blank" rel="noopener noreferrer" class="nav-item nav-social-link" aria-label="LinkedIn" title="LinkedIn">
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.5h4.56V23H.22V8.5zM8.5 8.5h4.37v1.98h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 6.99V23h-4.56v-7.03c0-1.68-.03-3.84-2.34-3.84-2.34 0-2.7 1.83-2.7 3.72V23H8.5V8.5z"/></svg>
-        </a>
-    
-        <a href="https://x.com/themahekunnisa" target="_blank" rel="noopener noreferrer" class="nav-item nav-social-link" aria-label="X" title="X">
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
-        </a>
-    
-        <a href="https://dev.to/themahekunnisa" target="_blank" rel="noopener noreferrer" class="nav-item nav-social-link" aria-label="Dev.to" title="Dev.to">
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.42 10.05 3.05 14.42l4.37 4.37 1.41-1.42-2.95-2.96 2.95-2.96-1.41-1.4zm9.16 0-1.41 1.4 2.95 2.96-2.95 2.96 1.41 1.42 4.37-4.37-4.37-4.37zM6.34 6.34 4.93 4.93 2.1 7.76l2.83 2.83 1.41-1.25zM17.66 6.34l-1.41 1.41 1.41 1.25 2.83-2.83-2.83-2.83-1.41 1.25z"/></svg>
-        </a>
-    </div>
-                <div class="nav-divider" aria-hidden="true"></div>
                 <button class="nav-theme-toggle" id="theme-toggle" aria-label="Toggle theme" type="button">
-                    <svg class="icon theme-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="5"/></svg>
+                    <svg class="icon theme-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
                 </button>
             </div>
         </nav>

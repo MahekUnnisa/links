@@ -8,31 +8,11 @@ const config = {
     },
 
     contact: {
-        email: "hello@mahekunnisa.dev",
-        location: "Hyderabad, India",
-        links: [
-            {
-                label: "Email",
-                value: "hello@mahekunnisa.dev",
-                url: "mailto:hello@mahekunnisa.dev",
-                icon: "envelope"
-            },
-            {
-                label: "LinkedIn",
-                value: "linkedin.com/in/mahekunnisa",
-                url: "https://www.linkedin.com/in/mahekunnisa/",
-                icon: "linkedin"
-            },
-            {
-                label: "Location",
-                value: "Hyderabad, India",
-                icon: "location-dot"
-            }
-        ]
+        email: "mahekunnisa011@gmail.com"
     },
 
     about: {
-        text: "I primarily work on building automated systems that generate and manage news and developer content at scale. This includes backend services, background processing, personalisation, and integrations with AI-driven workflows. I also build and maintain Chrome extensions using React, integrating them with backend services and internal systems. In parallel, I work on internal tooling — including an analytics platform built on a Kubernetes-based, event-driven architecture for tracking and processing large-scale application data. My core interests are backend architecture, system design, automation, and the development of reliable production systems."
+        text: "I build backend systems that automate news and developer content at scale — APIs, background jobs, AI workflows, and Chrome extensions in React. I also work on internal tooling, including a Kubernetes-based analytics platform for large-scale event data. I care about system design, automation, and shipping reliable production software."
     },
 
     experience: [
@@ -40,39 +20,39 @@ const config = {
             company: "NewsBytes",
             role: "Senior Software Engineer",
             period: "Jan 2026 — Present",
-            logo: "",
+            logo: "./assets/newsbytes-logo.png",
             logoInitial: "N",
             url: "https://www.newsbytesapp.com",
             highlights: [
-                "Building automated systems that generate and manage news content at scale",
-                "Developing an analytics platform on Kubernetes-based, event-driven architecture",
-                "Leading backend architecture and production system reliability initiatives"
+                "Own automated pipelines for news and developer content at scale",
+                "Build event-driven analytics on Kubernetes for product and ops data",
+                "Drive backend architecture, reliability, and production quality"
             ]
         },
         {
             company: "NewsBytes",
             role: "Backend Developer",
             period: "Aug 2023 — Jan 2026",
-            logo: "",
+            logo: "./assets/newsbytes-logo.png",
             logoInitial: "N",
             url: "https://www.newsbytesapp.com",
             highlights: [
-                "Revamped Chrome Extension using Next.js with Google Calendar integration",
-                "Built image processing pipeline with Python, Pillow & BeautifulSoup for automated media handling",
-                "Optimized Laravel backend API with caching strategies and content personalization"
+                "Shipped a Next.js Chrome extension with Google Calendar integration",
+                "Automated image pipelines with Python, Pillow, and BeautifulSoup",
+                "Tuned Laravel APIs with caching and personalization for DevBytes"
             ]
         },
         {
             company: "NewsBytes",
             role: "Backend Developer Intern",
             period: "Feb 2023 — Aug 2023",
-            logo: "",
+            logo: "./assets/newsbytes-logo.png",
             logoInitial: "N",
             url: "https://www.newsbytesapp.com",
             highlights: [
-                "Maintained Laravel and Livewire CMS for the DevBytes app",
-                "Revamped CMS UI with jQuery, Bootstrap, and Livewire to improve UX",
-                "Integrated GPT AI models via API to automate content generation"
+                "Maintained the Laravel + Livewire CMS behind the DevBytes app",
+                "Refreshed CMS UI with Bootstrap and Livewire for better editorial flow",
+                "Wired GPT APIs into workflows to automate content generation"
             ]
         },
         {
@@ -83,22 +63,9 @@ const config = {
             logoInitial: "S",
             url: "",
             highlights: [
-                "Built web applications using Node.js, Express.js, and MongoDB",
-                "Documented AWS practices and authored OpenAPI API documentation",
-                "Assisted in modernizing APIs to current best practices"
-            ]
-        },
-        {
-            company: "The Yarn Bazaar",
-            role: "Market Research Intern",
-            period: "Jul 2021 — Sep 2021",
-            logo: "",
-            logoInitial: "Y",
-            url: "https://www.theyarnbazaar.com",
-            highlights: [
-                "Interviewed 75+ professionals for market research across industry portals",
-                "Compiled prospective client lists and improved existing market analysis data",
-                "Documented detailed analysis of current market demand and supply"
+                "Built full-stack features with Node.js, Express, and MongoDB",
+                "Documented AWS practices and OpenAPI specs for internal APIs",
+                "Helped migrate legacy endpoints to current API standards"
             ]
         }
     ],
@@ -127,11 +94,12 @@ const config = {
     ],
 
     projects: {
-        subtitle: "A selection of things I've built and shipped.",
+        title: "Latest work",
+        subtitle: "Side projects and experiments I've shipped.",
         items: [
             {
                 name: "AlphaMall",
-                description: "A full-featured ecommerce website where users can register, browse products by category, manage a wishlist, and checkout. Built with Django and Bootstrap.",
+                description: "Ecommerce app with auth, categories, wishlist, and cart — Django and Bootstrap.",
                 tech: ["Python", "Django", "SQLite3", "Bootstrap"],
                 links: {
                     source: "https://github.com/MahekUnnisa/AlphaMall-Ecommerce-website-using-Django"
@@ -139,7 +107,7 @@ const config = {
             },
             {
                 name: "Notion to GitHub Publisher",
-                description: "A tool that uses Notion and GitHub REST APIs to fetch code snippets from Notion page child blocks and publish them directly to a selected GitHub repository.",
+                description: "Syncs code blocks from Notion pages to a GitHub repo via Notion and GitHub APIs.",
                 tech: ["Node.js", "Notion API", "GitHub API"],
                 links: {
                     source: "https://github.com/MahekUnnisa/Notion-GitHub-Publisher-tool"
@@ -147,7 +115,7 @@ const config = {
             },
             {
                 name: "TimeSphere",
-                description: "A news web app built with React and a free public News API. Displays live articles across categories with a clean, responsive interface.",
+                description: "News reader built with React and a public News API, with category browsing.",
                 tech: ["React", "News API", "JavaScript"],
                 links: {
                     source: "https://github.com/MahekUnnisa/TimeSphere"
@@ -155,7 +123,7 @@ const config = {
             },
             {
                 name: "Gemini Chatbot",
-                description: "A conversational chatbot interface built in plain React, integrated with Google's Gemini API for AI-powered responses.",
+                description: "Chat UI in plain React powered by Google's Gemini API.",
                 tech: ["React", "Gemini API", "JavaScript"],
                 links: {
                     source: "https://github.com/MahekUnnisa/Gemini-Chatbot-using-Plain-React"
@@ -165,25 +133,26 @@ const config = {
     },
 
     onlinePresence: {
-        subtitle: "I write about what I learn and share my open source work.",
+        title: "Elsewhere on the web",
+        subtitle: "Writing, code, and conversations about building software.",
         items: [
             {
                 title: "GitHub",
-                description: "Open-source projects, experiments, and contributions — 300+ contributions across repos.",
+                description: "Open-source projects and experiments — 300+ contributions.",
                 url: "https://github.com/MahekUnnisa",
                 icon: "github",
                 type: "code"
             },
             {
-                title: "Dev.to Blog",
-                description: "Technical articles on Python, JavaScript, APIs, and my developer journey.",
+                title: "Dev.to",
+                description: "Articles on Python, JavaScript, APIs, and learning in public.",
                 url: "https://dev.to/themahekunnisa",
                 icon: "dev",
                 type: "blog"
             },
             {
-                title: "X (Twitter)",
-                description: "Quick thoughts, links, and conversations about tech and building in public.",
+                title: "X",
+                description: "Quick notes, links, and threads on tech and growth.",
                 url: "https://x.com/themahekunnisa",
                 icon: "x-twitter",
                 type: "social"
@@ -196,7 +165,7 @@ const config = {
             institution: "Osmania University, Hyderabad",
             degree: "B.Tech, Textile Technology",
             period: "2018 — 2022",
-            logo: "",
+            logo: "./assets/osmania-logo.png",
             logoInitial: "O"
         }
     ],
@@ -227,12 +196,11 @@ const config = {
     nav: {
         sections: [
             { id: "intro", label: "Intro", icon: "house" },
-            { id: "contact", label: "Contact", icon: "envelope" },
             { id: "about", label: "About", icon: "user" },
             { id: "experience", label: "Experience", icon: "briefcase" },
             { id: "skills", label: "Skills", icon: "code" },
             { id: "projects", label: "Projects", icon: "folder-open" },
-            { id: "online-presence", label: "Online", icon: "book-open" },
+            { id: "online-presence", label: "Writing", icon: "book-open" },
             { id: "education", label: "Education", icon: "graduation-cap" }
         ]
     }
